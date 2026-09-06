@@ -1,3 +1,6 @@
+# NOTE: I originally planned on using /v1/artists to get genre data, but spotify removed this endpoint in 2026
+# so I am using a manually curated genre mapping instead. see readme for more 
+
 ARTIST_GENRES = {
   "5INjqkS1o8h1imAzPqGZBb":["psychedelic rock", "neo-psychedelia", "psychedelic pop"], # tame impala
   "5RTLRtXjbXI2lSXc6jxlAz":["contemporary r&b", "alternative r&b", "neo-soul"], # ravyn lenae
