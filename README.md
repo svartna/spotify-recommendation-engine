@@ -20,3 +20,7 @@ tracks using what is still available like duration, release date, and if it is e
 #### Note 2
 "Popularity" has also been removed as information that can be pulled from the track along with the other changes to track
 information
+
+#### Related resources
+https://developer.spotify.com/blog/2024-11-27-changes-to-the-web-api
+https://developer.spotify.com/documentation/web-api/references/changes/february-2026
