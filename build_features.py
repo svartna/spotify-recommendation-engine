@@ -1,3 +1,4 @@
+import pandas as pd
 from get_top_tracks import get_top_tracks
 from curated_genres import ARTIST_GENRES
 
@@ -18,6 +19,10 @@ def build_feature_rows():
 
     return tracks_with_features
 
-if __name__ == "__main__":
+def build_feature_dataframe():
     rows = build_feature_rows()
-    print(rows[0])
+    return pd.DataFrame(rows)
+
+if __name__ == "__main__":
+    df = build_feature_dataframe()
+    print(df)
