@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.preprocessing import MultiLabelBinarizer
+from sklearn.preprocessing import MultiLabelBinarizer, MinMaxScaler
 from build_features import build_feature_dataframe
 
 df = build_feature_dataframe()
@@ -13,5 +13,8 @@ features_df = pd.concat([
     df["explicit"].astype(int).reset_index(drop=True),
     genre_df.reset_index(drop=True)
 ], axis=1)
+
+scaler = MinMaxScaler()
+features_df["duration_ms"] = scaler.fit_transform(features_df[["duration_ms"]])
 
 print(features_df)
