@@ -19,10 +19,22 @@ def build_feature_rows():
 
     return tracks_with_features
 
+def ms_to_minutes_seconds(ms):
+    total_seconds = ms // 1000
+    minutes = total_seconds // 60
+    seconds = total_seconds % 60
+    return f"{minutes}:{seconds:02d}"
+
+def explicit_label(is_explicit):
+    return "Yes" if is_explicit else "No"
+
 def build_feature_dataframe():
     rows = build_feature_rows()
     return pd.DataFrame(rows)
 
 if __name__ == "__main__":
     df = build_feature_dataframe()
-    print(df)
+    df["duration"] = df["duration_ms"].apply(ms_to_minutes_seconds)
+    df["explicit?"] = df["explicit"].apply(explicit_label)
+    df["release date"] = df["release_date"]
+    print(df[["name", "artist", "duration", "explicit?", "release date"]])
