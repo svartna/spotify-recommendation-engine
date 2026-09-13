@@ -17,6 +17,8 @@ def get_similar_tracks(track_name, top_n=3):
     return similar_tracks
 
 compare_to = input("Name of song you want to compare to:  ")
+print()
+
 try:
     results = get_similar_tracks(compare_to)
 except IndexError:
