@@ -36,7 +36,10 @@ CLIENT_SECRET=your_client_secret
 REFRESH_TOKEN=your_refresh_token
 ```
 
-- Run `python3 similarity.py`
+- run `python3 src/get_top_tracks.py` to see your available song list
+- run `python3 src/similarity.py`
+- copy the name of the song (including features)
+- see what songs in your top tracks are similar!
 
 ## Design decisions
 
