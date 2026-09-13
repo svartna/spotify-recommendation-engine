@@ -32,6 +32,7 @@ def build_feature_dataframe():
     rows = build_feature_rows()
     return pd.DataFrame(rows)
 
+# print top tracks and song data
 if __name__ == "__main__":
     df = build_feature_dataframe()
     df["duration"] = df["duration_ms"].apply(ms_to_minutes_seconds)

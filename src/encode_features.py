@@ -16,5 +16,3 @@ features_df = pd.concat([
 
 scaler = MinMaxScaler()
 features_df["duration_ms"] = scaler.fit_transform(features_df[["duration_ms"]])
-
-print(features_df)
