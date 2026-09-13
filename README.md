@@ -37,7 +37,13 @@ REFRESH_TOKEN=your_refresh_token
 ```
 
 - run `python3 src/get_top_tracks.py` to see your available song list
+
+![get_tracks](assets/get_tracks.png)
+
 - run `python3 src/similarity.py`
+
+![demo](assets/demo.gif)
+
 - copy the name of the song (including features)
 - see what songs in your top tracks are similar!
 
